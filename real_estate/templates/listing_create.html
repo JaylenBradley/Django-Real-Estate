@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %} 
+    
+    <h1 class="text-4xl text-gray-900">Create new Listing</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}    <!-- Need to pass when using a post method (for security) -->
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+
+{% endblock %}
